@@ -27,3 +27,15 @@
     color: rgb(18, 73, 175);
     transition: all .1s ease-in-out;
  }
+ .head-page h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .head-page h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ 
+
