@@ -9,3 +9,59 @@
     z-index: 999;
     background: rgb(50, 50, 50);
 }
+
+.card {
+justify-content: center;
+text-align: center;
+padding: 5px;
+border-radius: 1rem;
+border-color: rgb(33, 36, 35);
+width: 300px;
+height: 450px;
+background: rgb(176, 176, 224);
+transition: 1s ease-in-out;
+}
+
+.card p{
+display: none;
+color: rgb(176, 176, 224);
+}
+.card:hover p{
+    transition: 1s ease-in-out;
+    
+display:contents;
+}
+
+.card:hover{
+    transition: 1s ease-in-out;
+    scale: 1.1;
+}
+
+.card_container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr  1fr 1fr;
+    transition: 1s;
+  
+   
+   
+}
+
+
+@media screen and (max-width:1300px){
+    .card_container{
+        transition: 1 ease;
+        grid-template-columns: 1fr 1fr;
+
+
+    }
+}
+@media screen and (max-width:750px){
+    .card_container{
+        transition: 1 ease;
+        grid-template-columns: 1fr;
+        
+
+    }
+}
