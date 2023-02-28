@@ -23,15 +23,21 @@ transition: 1s ease-in-out;
 }
 
 .card p{
-display: none;
-color: rgb(176, 176, 224);
+    display: none;
+    color: rgb(176, 176, 224);
 }
 .card:hover p{
-    transition: 1s ease-in-out;
-    
-display:contents;
+    transition: 1s ;
+    color: black;
+    display:contents;
 }
-
+.card i{
+    font-size: 10rem;
+}
+.card:hover i{
+   font-size: xx-small;
+   display:none ;
+}
 .card:hover{
     transition: 1s ease-in-out;
     scale: 1.1;
