@@ -16,7 +16,7 @@ const highlightMenu = () => {
   const homeMenu = document.querySelector('#home-page');
   const aboutMenu = document.querySelector('#about-page');
   const servicesMenu = document.querySelector('#services-page');
-  const SnowReportings = document.querySelector('#signup');
+  const SnowReportings = document.querySelector('#services-page');
   let scrollPos = window.scrollY;
   // console.log(scrollPos);
 
