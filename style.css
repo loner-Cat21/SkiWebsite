@@ -213,15 +213,23 @@ transition: 1s ease-in-out;
     .card_container{
         transition: 1 ease;
         grid-template-columns: 1fr 1fr;
-
-
+        justify-content: center;
+        align-items: center;
+    }
+    .card{
+        justify-content: center;
+        align-items: center;
     }
 }
 @media screen and (max-width:750px){
     .card_container{
         transition: 1 ease;
         grid-template-columns: 1fr;
-        
-
+        justify-content: center;
+        align-items: center;
+    }
+    .card{
+        justify-content: center;
+        align-items: center;
     }
 }
