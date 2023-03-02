@@ -194,7 +194,7 @@ transition: 1s ease-in-out;
 }
 .card:hover{
     transition: 1s ease-in-out;
-    scale: 1.1;
+    scale: 1.05;
 }
 
 .card_container{
@@ -203,9 +203,6 @@ transition: 1s ease-in-out;
     align-items: center;
     grid-template-columns: 1fr 1fr  1fr 1fr;
     transition: 1s;
-  
-   
-   
 }
 
 
