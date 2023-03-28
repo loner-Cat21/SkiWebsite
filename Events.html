@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="trystyle.css">
 
     <title>Document</title>
 </head>
@@ -42,7 +43,73 @@
         <h3>- Let it snow, let it snow, let it snow -</h3>
     </div>
     <h1>Events</h1>
-    <script src="app.js"></script>
+    <h2 class="center">Summer Hiking on the Trails and Camping</h2>
 
+
+    <div class="choosingACamp">
+        <h3 class="center">Camping!</h3>
+        <h4>Discounts & Details!</h4>
+            <p>20% discount off the total if booked prior to April 30!<br>
+            10% discount off the total if booked prior to May 31!<br>
+            Additional 10% discount if booking for a Tuesday, Wednesday, or Thursday!</p>
+        <div class="eventCardHolder">
+        <div class="eventCard">
+            <h4>Trail Getaway:</h4>
+            <img src="img/TrailsImg.jpg" alt="Picture of Trail Getaway Campsite" class="EventCardImg">
+            <p>Price: $40 Per night</p>
+            <p>Fireplace: No</p>
+        </div>
+        <div class="eventCard">
+            <h4>Mountain Retreat:</h4>
+            <img src="img/MountainRe.jpg" alt="Picture of Mountain Retreat Campsite" class="EventCardImg">
+            <p>Price: $50 Per night</p>
+            <p>Fireplace: yes</p>
+        </div>
+    </div>
+        <div class="radioButton">
+            <div class="RBItem">
+                <input type="radio" id="TrailGet" name="CampChoice" value="TrailGet" >
+                <label for="Trail Getaway">Trail Getaway</label><br>
+            </div>
+            <div class="RBItem">
+                <input type="radio" id="MountRe" name="CampChoice" value="MountRe" >
+                <label for="Mountain Retreat">Mountain Retreat</label><br>
+            </div>
+        </div>
+        <br>
+        <div class="inputDates">
+            <input type="date" class="startDate" id="endDate">
+            <input type="date" class="endDate" id="endDate">
+        </div>
+
+
+
+        <p class="Price" id="Price">$$$</p>
+        <p class="Details" id="Details">qeawtdre</p>
+
+        <button class="btnSubmit">Proceed To Checkout</button>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="app.js"></script>
+    <script src="events.js"></script>
 </body>
 </html>
