@@ -5,38 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <title>Document</title>
 </head>
-<body>
-    <nav class="navbar" >
-        <div class="navbar_container">
-            <div class="navbar_toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <ul class="navbar_menu">
-                <li class="navbar__item">
-                    <a href="employment.html" class="navbar_links" id="Employment">Employment</a>
-                </li>
-    
-                <li class="navbar__item">
-                    <a href="Events.html" class="navbar_links" id="Events">Events</a>
-                </li>
-    
-                <li class="navbar__item">
-                    <a href="lessons.html" class="navbar_links" id="Lessons">Lessons</a>
-                </li>
-    
-                <li class="navbar__btn">
-                    <a href="snowReports.html" class="navbar_links" id="snowReports">Snow Reports</a>
-                </li>
-    
-            </ul>
-  
-        </div>
-    </nav>
+<body class="has-drawer">
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="employment.html">Employment</a>
+        <a href="Events.html">Events</a>
+        <a href="lessons.html">Lessons</a>
+        <a href="snowReports.html">Snow Reports</a>
+    </div>
+      <span class="open" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+      
     <div class="head-page">
         <h1>Show Fever Ski And Board School</h1>
         <h3>- Let it snow, let it snow, let it snow -</h3>
