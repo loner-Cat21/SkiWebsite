@@ -49,18 +49,18 @@
     </div>
         <div class="radioButton">
             <div class="RBItem">
-                <input type="radio" id="TrailGet" name="CampChoice" value="TrailGet" >
+                <input type="radio" id="TrailGet" name="CampChoice" value="40" onclick="RadioClicked(40)" >
                 <label for="Trail Getaway">Trail Getaway</label><br>
             </div>
             <div class="RBItem">
-                <input type="radio" id="MountRe" name="CampChoice" value="MountRe" >
+                <input type="radio" id="MountRe" name="CampChoice" value="50" onclick="RadioClicked(50)" >
                 <label for="Mountain Retreat">Mountain Retreat</label><br>
             </div>
         </div>
         <br>
         <div class="inputDates">
-            <input type="date" class="startDate" id="endDate">
-            <input type="date" class="endDate" id="endDate">
+            <input type="date" class="startDate" id="startDate" min="2023-01-01" max="2024-12-31"   onchange="startDateEvent()">
+            <input type="date" class="endDate" id="endDate"  onchange="endDateEvent()" >
         </div>
 
 
@@ -68,7 +68,7 @@
         <p class="Price" id="Price">$$$</p>
         <p class="Details" id="Details">qeawtdre</p>
 
-        <button class="btnSubmit">Proceed To Checkout</button>
+        <button class="btnSubmit" id="btnSubmit" onclick="PriceFuntion()">Check Price</button>
 
 </div>
 
