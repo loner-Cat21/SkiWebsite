@@ -281,15 +281,10 @@ margin:.35rem;
   @media screen and (max-width: 750px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
-    .open{
-        font-size: 10px;
-        border: none;
-    }
     .done span{
         font-size: 1.5rem;
         margin: .6rem;
         padding: .6rem;
-        border: .2rem solid;
     }
   }
 
@@ -297,7 +292,7 @@ margin:.35rem;
     font-size: 2rem;
     margin: 1rem;
     padding: 1rem;
-    border: .2rem solid;
+    cursor: pointer;
   }
 
   .weatherToday{
