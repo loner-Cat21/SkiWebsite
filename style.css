@@ -287,3 +287,13 @@ margin:.35rem;
     padding: 1rem;
     border: .2rem solid;
   }
+  .weatherToday{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 1rem;
+  }
+  .weatherToday p{
+    text-align: center;
+  }
