@@ -278,15 +278,28 @@ margin:.35rem;
     margin-left: 50px;
   }
   
-  @media screen and (max-height: 450px) {
+  @media screen and (max-width: 750px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
+    .open{
+        font-size: 10px;
+        border: none;
+    }
+    .done span{
+        font-size: 1.5rem;
+        margin: .6rem;
+        padding: .6rem;
+        border: .2rem solid;
+    }
   }
+
   .open{
+    font-size: 2rem;
     margin: 1rem;
     padding: 1rem;
     border: .2rem solid;
   }
+
   .weatherToday{
     width: 100%;
     align-items: center;
@@ -294,6 +307,7 @@ margin:.35rem;
     margin: auto;
     padding: 1rem;
   }
+
   .weatherToday p{
     text-align: center;
   }
