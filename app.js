@@ -63,3 +63,9 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
+
+fetch( "https://api.openweathermap.org/data/2.5/weather?q=colorado&appid=c8b260397fd294145748ea4206128b3f", {
+  "method": "GET",
+
+
+});
