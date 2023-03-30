@@ -69,14 +69,14 @@ const AverageTempToday = document.getElementById("tempAverage");
 let TempAvgToday = (10).toString();
 AverageTempToday.textContent = "today's Average Temp is: ";
 
-// fetch( "https://api.openweathermap.org/data/2.5/weather?q=colorado&appid=c8b260397fd294145748ea4206128b3f", {
-//   "method": "GET",
-//   "headers": {
-//   }
-//   })
-// .then(response => {
-//   console.log(response);
-// })
-// .catch(err => {
-//   console.error(err);
-// });
+fetch( "https://api.openweathermap.org/data/2.5/weather?q=colorado&appid=c8b260397fd294145748ea4206128b3f",{
+  "method": "GET",
+  "headers": {
+  }
+  })
+  .then(response => {
+  console.log(response);
+  })
+  .catch(err => {
+  console.error(err);
+});

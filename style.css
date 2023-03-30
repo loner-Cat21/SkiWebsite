@@ -296,7 +296,6 @@ margin:.35rem;
   }
 
   .weatherToday{
-    width: 100%;
     align-items: center;
     justify-content: center;
     margin: auto;
@@ -306,3 +305,67 @@ margin:.35rem;
   .weatherToday p{
     text-align: center;
   }
+  #weatherContainer{
+    position:fixed;
+    /* transform: translate(-50%, -50%); */
+    height: 300px;
+    width: 1300px;
+    border-radius: 10px;
+  }
+  #iconsContainer{
+    position: relative;
+    top: 50%;
+    margin-right: -50%;
+    height: 240px;
+    width: 1200px;
+    border: 5px solid #fFF;
+    border-radius: 10px;
+
+  }
+  .WOAH{
+    background: linear-gradient(to top, #c7f4ff 0%, #0080a0 100%) ;
+  }
+  .icons{
+    display: flexbox;
+    flex-direction: row;
+    float: left;
+    height: 200px;
+    width:190px;
+    margin: 20px;
+    border: 5px solid #fff;  
+    border-radius: 10px;
+}
+.image{
+    height: 140px;
+    width: 100%;
+}
+.imgClass{
+    height:140px;
+    width: 100%;
+}
+.weather{
+    margin: 5px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+.minValues{
+    text-align: center;
+    display: inline;
+    border-radius: 5px;
+    height: 25px;
+    width: 85px;
+    margin: 0;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+.maxValues{
+    text-align: center;
+    display: inline;
+    border-radius: 5px;
+    height: 25px;
+    width: 85px;
+    margin: 0;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
