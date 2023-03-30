@@ -58,25 +58,47 @@ navLogo.addEventListener('click', hideMobileMenu);
 
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
-};
+}
 
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
-};
+}
 
 //getting element from the hTML Document and trying to manipulate it
 const AverageTempToday = document.getElementById("tempAverage");
-let TempAvgToday = (10).toString();
-AverageTempToday.textContent = "today's Average Temp is: ";
+AverageTempToday.innerHTML = "today's Average Temp is: ";
 
-fetch( "https://api.openweathermap.org/data/2.5/weather?q=colorado&appid=c8b260397fd294145748ea4206128b3f",{
-  "method": "GET",
-  "headers": {
-  }
-  })
-  .then(response => {
-  console.log(response);
-  })
-  .catch(err => {
-  console.error(err);
+fetch( "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Colorado?unitGroup=us&key=GCXRTVTJ8DZ48XCLEYHDEPRTR&contentType=json",{
+    method: 'GET', 
+    headers: {
+  
+    },
+            
+  }).then(response => {
+    if (!response.ok) {
+      throw response; //check the http response code and if isn't ok then throw the response as an error
+    }
+              
+    return response.json(); //parse the result as JSON
+
+  }).then(response => {
+    //response now contains parsed JSON ready for use
+    processWeatherData(response);
+
+  }).catch((errorResponse) => {
+    if (errorResponse.text) { //additional error information
+      errorResponse.text().then( errorMessage => {
+        //errorMessage now returns the response body which includes the full error message
+      })
+    } else {
+      //no additional error information 
+    } 
 });
+const el_MinDay1 = document.getElementById("Day1Min");
+el_MinDay1 = day.tempMax;
+
+const el_Weather3 = document.getElementById("weatherContainer");
+
+function myFunction(){
+  el_Weather3.style.visibility = "visible";
+}
