@@ -7,6 +7,10 @@ let details = document.getElementById("Details");
 let StartDate;
 let endDate;
 let AmountOfDays;
+let DayDiscount=0;
+let DateDiscount;
+
+
 
 // Event functions
 function RadioClicked(BP){
@@ -21,11 +25,21 @@ function endDateEvent(){
     endDate = document.getElementById("endDate").value;
 }
 function MathForPrice(){
-let DicountNum = DateCal();
-let TotalCost;
-let amountForRegular = AmountOfDays-DicountNum;
-TotalCost= amountForRegular*BasePrice + (DicountNum*(BasePrice*.8));
-return TotalCost;
+    if(AmountOfDays !=0){
+    let DicountNum = DateCal();
+    let discountForDayBooked=DateBooked();
+    let TotalCost;
+    let amountForRegular = AmountOfDays-DicountNum;
+    TotalCost= amountForRegular*BasePrice + (DicountNum*(BasePrice*.9));
+    TotalCost=TotalCost*discountForDayBooked;
+    if(TotalCost<0){
+        TotalCost=TotalCost*-1;
+    }
+
+    return "$"+TotalCost; 
+ }  else{
+    return "Error"
+ } 
 }
 
 function dateCreator(TempDate){
@@ -43,32 +57,44 @@ let endDateCal = new Date(dateCreator(endDate));
  AmountOfDays = (endDateCal.getDate() -startdatecal.getDate())+1;
 let Temp1 =startdatecal.getDate();
 let temp2;
-if(AmountOfDays=>0){
-    let discountDayCount = 0;
+if(AmountOfDays<2){
    
+    let discountDayCount =0;
     
-    for(let i = 0;AmountOfDays>i; i++ ){
-        
+    for(let i = 0;AmountOfDays>i; i++ ){    
       temp2 = new Date(DateYear,DateMonth,Temp1+i,)
         let tempDay= temp2.getDay();
         let dayOfWeek=FindDayOfWeek(tempDay)
         if(dayOfWeek =="Tuesday" || dayOfWeek == "Wednesday" || dayOfWeek == "Thursday"){
             discountDayCount++;
+            DayDiscount++;
         }
      }
-    //  if(startdatecal.getDay() == endDateCal.getDay()){
-    //     discountDayCount=discountDayCount+(discountDayCount/2)
-    //}
-return discountDayCount;
+return AmountOfDays;
 }else{
     alert("Please Input Correct Dates");
+    AmountOfDays = 0;
+    return 0;
+
 }
 };
 function DateBooked(){
     let actualDate= new Date();
-    
-    // if(actualDate.getMonth = "May")
-    return actualDate;
+    let monthBooked = actualDate.getMonth();
+    let dayBooked = actualDate.getDate();
+    let DayBookedDiscount;
+    if(monthBooked<= 3 ){
+        DayBookedDiscount = .8;
+        DateDiscount=" April 30th";
+    }
+    else if(monthBooked<=4){
+        DayBookedDiscount=.9;
+        DateDiscount=" May 31st";
+    }else{
+        DayBookedDiscount =0
+    }
+   
+    return DayBookedDiscount;
 }
 
 function FindDayOfWeek(Date){
@@ -97,10 +123,26 @@ return "Saturday";
 break;
 };
 };
+function WhatDiscounts(){
+    let discountDetails ="";
+    let amountDsicounted = DateBooked();
+    if(DayDiscount !=0){
+        discountDetails = "You have Received a 10% discount on "+ DayDiscount+" days because of the Tuesday, Wednesday, or Thursday Deal!"
+    }
+    // if(DayBookedDiscount!="" && discountDetails!=""){
+    //     discountDetails+= " You have also Received a discount of " +amountDsicounted*100+"% because you booked before" + DayBookedDiscount +"!";
+    // }
+   
+
+
+return discountDetails;
+
+
+}
 
 function PriceFuntion(){
     document.getElementById('Price').textContent= MathForPrice();
-    document.getElementById("Details").textContent = DateBooked();
+    document.getElementById("Details").textContent = FindDayOfWeek(Date);
 };
 
 
