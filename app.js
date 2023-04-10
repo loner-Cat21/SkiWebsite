@@ -17,7 +17,6 @@ function getInfo() {
 }
 
 function displayDate() {
-  console.log("*****");
   const todayDate = document.getElementById('dateToday');
 
   const date = new Date();
@@ -33,6 +32,6 @@ function displayDate() {
 
   todayDate.textContent = currentDate;
 
-  const min = document.getElementById()
-
+  const min = document.getElementById('minToday')
+  min.textContent +=  Math.round(data.list.main.temp_min - 273.15, -2);
 }
