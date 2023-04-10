@@ -344,31 +344,8 @@ margin:.35rem;
     width: 100%;
 }
 .weather{
-    margin: 5px;
-    border-radius: 5px;
-    text-align: center;
-    font-weight: bold;
-}
-.minValues{
-    text-align: center;
-    display: inline;
-    border-radius: 5px;
-    height: 25px;
-    width: 85px;
-    margin: 0;
-    margin-bottom: 5px;
-    margin-left: 5px;
-}
-.maxValues{
-    text-align: center;
-    display: inline;
-    border-radius: 5px;
-    height: 25px;
-    width: 85px;
-    margin: 0;
-    margin-bottom: 5px;
-    margin-left: 5px;
-}
-#weatherContainer{
-    visibility: hidden;
+    border:.3rem;
+    border-style: solid;
+    width: 15rem;
+    box-shadow: 1rem, #000000;
 }

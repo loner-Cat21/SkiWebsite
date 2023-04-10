@@ -10,7 +10,7 @@
 
     <title>Document</title>
 </head>
-<body class="WOAH">
+<body class="WOAH" onload="getInfo(); displayDate();">
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="employment.html">Employment</a>
@@ -34,35 +34,20 @@
         <img src="" id="weatherIcon">
         <p>Max:<span id="highTempToday"class="highTempToday" style="color: blueviolet;">#C</span></p>
         <p>Min:<span id="lowTempToday"class="highTempToday" style="color: rgb(132, 0, 255);">#C</span></p>
-
-
-        <h3 id="Para1">3-Day Weather Forecast</h3>        <br>
-        <div id="weatherContainer"></div>
-            <div id="iconsContainer">
-                <div class="icons">
-                    <p class="weather" id="day1"></p>
-                    <div class="image"><img src="dots.png" class="imgClass" id="img1" alt="" ></div>
-                    <p class="minValues" id="Day1Min">Loading......</p>
-                    <p class="maxValues" id="Day1Max">Loading......</p>
-                </div>
-                <div class="icons">
-                    <p class="weather" id="day2"></p>
-                    <div class="image"><img src="dots.png" class="imgClass" id="img2" alt="" ></div>
-                    <p class="minValues" id="Day2Min">Loading......</p>
-                    <p class="maxValues" id="Day2Max">Loading......</p>
-                </div>
-                <div class="icons">
-                    <p class="weather" id="day3"></p>
-                    <div class="image"><img src="dots.png" class="imgClass" id="img3" alt="" ></div>
-                    <p class="minValues" id="Day3Min">Loading......</p>
-                    <p class="maxValues" id="Day3Max">Loading......</p>
-                </div>
+        <center>
+            <div class="weather">
+                <h3 id="today">today's weather</h3>
+                <p id="dateToday">Date</p>
+                <img src="">
+                <p id="minToday">min: </p>
+                <p id="maxToday">max: </p>
             </div>
-        </div>
+        </center>
+
         <br>
     <button class="3day" onclick="myFunction()" style="margin: 1rem;">3 day forecast</button>
-    <div id="weatherContainer"></div>
-        <a class="weatherwidget-io" href="https://forecast7.com/en/35d09n106d61/albuquerque/?unit=us" data-label_1="ALBUQUERQUE" data-label_2="WEATHER" data-days="3" data-theme="original" >ALBUQUERQUE WEATHER</a>
+    <div id="weatherContainer" style="height: 15rem;"></div>
+        <a class="weatherwidget-io" href="https://forecast7.com/en/35d09n106d61/albuquerque/?unit=us" data-label_1="ALBUQUERQUE" data-label_2="WEATHER" data-days="7" data-theme="original" >ALBUQUERQUE WEATHER</a>
         <script>
         !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
         </script>
