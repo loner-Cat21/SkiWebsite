@@ -10,12 +10,6 @@ let AmountOfDays;
 let DayDiscount=0;
 let DateDiscount="";
 let FullDate='';
-// let DateDate= new Date();
-// let DateDateYear=DateDate.getFullYear;
-// let DateDateDay=DateDate.getDate;
-// let DateDateMonth=DateDate.getMonth;
-// FullDate = DateDateYear+"-"+DateDateMonth+"-"+DateDateDay;
-// document.getElementById('startDate').setAttribute('min',DateDate );
 
 
 // Event functions
