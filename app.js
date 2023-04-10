@@ -15,7 +15,9 @@ function getInfo() {
   .catch(err => alert("something went wrong: Please check your internet connection"))
 
 }
+
 function displayDate() {
+  console.log("*****");
   const todayDate = document.getElementById('dateToday');
 
   const date = new Date();
