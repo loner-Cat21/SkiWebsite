@@ -54,13 +54,13 @@
                 <label for="Trail Getaway">Trail Getaway</label><br>
             </div>
             <div class="RBItem">
-                <input type="radio" id="MountRe" name="CampChoice" value="50" onclick="RadioClicked(50)" >
+                <input type="radio" id="MountRe" name="CampChoice" value="50" min="2023-01-01" max="2024-12-31" onclick="RadioClicked(50)" >
                 <label for="Mountain Retreat">Mountain Retreat</label><br>
             </div>
         </div>
         <br>
         <div class="inputDates">
-            <input type="date" class="startDate" id="startDate" min="2023-01-01" max="2024-12-31"   onchange="startDateEvent()">
+            <input type="date" class="startDate" id="startDate" min="2023-01-01" max="2024-12-31" onchange="startDateEvent()">
             <input type="date" class="endDate" id="endDate"  onchange="endDateEvent()" >
         </div>
 
