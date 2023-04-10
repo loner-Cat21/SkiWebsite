@@ -33,4 +33,6 @@ function displayDate() {
 
   todayDate.textContent = currentDate;
 
+  const min = document.getElementById()
+
 }
