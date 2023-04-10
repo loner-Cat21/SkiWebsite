@@ -15,3 +15,20 @@ function getInfo() {
   .catch(err => alert("something went wrong: Please check your internet connection"))
 
 }
+function displayDate() {
+  const todayDate = document.getElementById('dateToday');
+
+  const date = new Date();
+
+  let currentDay= String(date.getDate()).padStart(2, '0');
+
+  let currentMonth = String(date.getMonth()+1).padStart(2,"0");
+
+  let currentYear = date.getFullYear();
+
+  //display the date as DD-MM-YYYY 
+  let currentDate = currentMonth + '-' + currentDay + '-' + currentYear;
+
+  todayDate.textContent = currentDate;
+
+}
