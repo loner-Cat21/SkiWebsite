@@ -10,6 +10,13 @@ function getInfo() {
   fetch( "https://api.openweathermap.org/data/2.5/forecast?q=colorado&appid=c8b260397fd294145748ea4206128b3f")
   .then(response => response.json())
   .then(data => {
+    for(i=0; i<1; i++){
+      document.getElementById('minToday').innerHTML+=Number(data.list[0].main.temp_min - 273.15).toFixed(5)+"°";
+    }
+    for(i=0; i<1; i++){
+      document.getElementById('maxToday').innerHTML+=Number(data.list[0].main.temp_max - 273.15).toFixed(5)+"°";
+    }
+
     console.log(data);
   })
   .catch(err => alert("something went wrong: Please check your internet connection"))
