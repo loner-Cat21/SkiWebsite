@@ -7,14 +7,22 @@ function closeNav() {
 }
 
 function getInfo() {
-  fetch( "https://api.openweathermap.org/data/2.5/forecast?q=colorado&appid=c8b260397fd294145748ea4206128b3f")
+  fetch( "https://api.openweathermap.org/data/2.5/forecast?q=Bailey&appid=c8b260397fd294145748ea4206128b3f")
   .then(response => response.json())
   .then(data => {
+    for(i=0; i<1; i++){
+      document.getElementById('minToday').innerHTML+=Number((data.list[i].main.temp - 273.15)+33.8).toFixed(5)+"°";
+    }
+    for(i=0; i<1; i++){
+      document.getElementById('maxToday').innerHTML+=Number((data.list[i].main.temp_max - 273.15)+33.8).toFixed(5)+"°";
+    }
     console.log(data);
   })
   .catch(err => alert("something went wrong: Please check your internet connection"))
 
 }
+
+document.getElementById('minToday').innerHTML = Math.round((data.list[0].main.temp_min - 273.15)+33.8).toFixed(5)+"°";
 
 function displayDate() {
   const todayDate = document.getElementById('dateToday');

@@ -346,8 +346,12 @@ margin:.35rem;
 .weather{
     border:.3rem;
     border-style: solid;
-    width: 15rem;
-    box-shadow: 1rem, #000000;
+    width: 17rem;
+    box-shadow: 5px 10px #353434;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    text-align: center;
 }
 .center{
     text-align: center;
