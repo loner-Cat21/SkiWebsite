@@ -11,19 +11,21 @@ function getInfo() {
   .then(response => response.json())
   .then(data => {
     for(i=0; i<1; i++){
-      document.getElementById('minToday').innerHTML+=Number((data.list[i].main.temp - 273.15)+33.8).toFixed(5)+"°";
+      document.getElementById('minToday').innerHTML+=Number((data.list[i].main.temp - 273.15)+33.8).toFixed(5)+"°C";
     }
     for(i=0; i<1; i++){
-      document.getElementById('maxToday').innerHTML+=Number((data.list[i].main.temp_max - 273.15)+33.8).toFixed(5)+"°";
+      document.getElementById('maxToday').innerHTML+=Number((data.list[i].main.temp_max - 273.15)+33.8).toFixed(5)+"°C";
+    }
+    
+    for(i=0; i<1; i++){
+      let icon= data.list[i].weather[i].icon;
+      document.getElementById("icon").src ="https://openweathermap.org/img/wn/"+ icon + "@2x.png";
     }
     console.log(data);
   })
   .catch(err => alert("something went wrong: Please check your internet connection"))
 
 }
-
-document.getElementById('minToday').innerHTML = Math.round((data.list[0].main.temp_min - 273.15)+33.8).toFixed(5)+"°";
-
 function displayDate() {
   const todayDate = document.getElementById('dateToday');
 
